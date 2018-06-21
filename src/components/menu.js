@@ -1,20 +1,24 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import App from './app';
-import {Badge} from 'react-materialize'
-
+//import { Link } from 'react-router-dom';
+import { Nav, NavItem } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap'
 
 const menu = () => {
     return(
-        <div>
-           <li><Link to="/">Home</Link></li>
-           <li><Link to="/user">Usuarios</Link></li>
-           <li><Link to="/">Produtos</Link></li>
-           <li><Link to="/">
-                sass <Badge newIcon>4</Badge>
-            </Link></li>
-            <li>Sair</li>
-        </div>
+        <Nav pullRight>
+            <LinkContainer to="/">
+                <NavItem eventKey={1}>Home</NavItem>
+            </LinkContainer>
+            <LinkContainer to="/user">
+                <NavItem eventKey={2}>Usuarios</NavItem>
+            </LinkContainer>
+            <LinkContainer to="/produtos">
+                <NavItem eventKey={3}>Produtos</NavItem>
+            </LinkContainer>
+            <LinkContainer to="/logout">
+                <NavItem eventKey={4}>Sair</NavItem>
+            </LinkContainer>
+        </Nav>
     );
 
 }
