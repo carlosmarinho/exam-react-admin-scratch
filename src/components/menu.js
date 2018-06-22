@@ -15,8 +15,11 @@ const menu = () => {
             <LinkContainer to="/produtos">
                 <NavItem eventKey={3}>Produtos</NavItem>
             </LinkContainer>
+            <LinkContainer to="/conversas">
+                <NavItem eventKey={4}>Conversas</NavItem>
+            </LinkContainer>
             <LinkContainer to="/logout">
-                <NavItem eventKey={4}>Sair</NavItem>
+                <NavItem eventKey={5}>Sair</NavItem>
             </LinkContainer>
         </Nav>
     );

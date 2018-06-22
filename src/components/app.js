@@ -7,8 +7,12 @@ import promise from 'redux-promise';
 import reducers from '../reducers';
 import Header from './header';
 import User from './User';
+import UserNew from './UserNew';
+import Chat from './Chat';
+import Product from './Product';
 
-const UserNew = () => <div>Criando usuario novo</div>;
+
+const Dashboard = () => {return <div>Minha Dashboard</div>}
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
 
@@ -20,8 +24,11 @@ const App = () => {
                     <div>
                         <Header />
                         <div className="container-fluid">
-                                <Route exact path="/user" component={User} />
-                                <Route path="/user/new" component={UserNew} />
+                            <Route exact path="/" component={Dashboard} />
+                            <Route exact path="/user" component={User} />
+                            <Route path="/user/new" component={UserNew} />
+                            <Route path="/conversas" component={Chat} />
+                            <Route path="/produtos" component={Product} />
                         </div>
                     </div>
                 </Route>
