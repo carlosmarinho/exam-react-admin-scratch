@@ -36,7 +36,7 @@ class User extends Component {
                   text: 'Sobrenome'
               }];
 
-            return <Table data={this.props.users} columns={columns} name="Usuário"></Table>
+            return <Table data={this.props.users} columns={columns} name="Usuário" create resource="user"></Table>
             //return <BootstrapTable keyField='id' data={ this.props.users } columns={ columns } />
         }
         return <div>Carregando Usuários ...</div>;

@@ -14,7 +14,7 @@ class Product extends Component {
         if(this.props.products){
             
 
-            return <Table data={this.props.products} columns={null} name="Produtos"></Table>
+            return <Table data={this.props.products} columns={null} name="Produtos" create resource="products"></Table>
             //return <BootstrapTable keyField='id' data={ this.props.users } columns={ columns } />
         }
         return <div>Carregando Produtos ...</div>;

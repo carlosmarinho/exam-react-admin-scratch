@@ -56,7 +56,8 @@ class Table extends Component {
     }
 
     showCreateButton() {
-        return <Link to="/user/new"><Button bsStyle="primary">Criar {this.props.name}</Button></Link>
+        if(this.props.create)
+            return <Link to={`/${this.props.resource}/new`}><Button bsStyle="primary">Criar {this.props.name}</Button></Link>
     }
 
     showTable() {
